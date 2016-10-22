@@ -13,10 +13,15 @@ public class UserViewController {
 
     @RequestMapping(value = {"/{fragmentFile}.html"})
     public ModelAndView genericEachHtmlView(ModelAndView mv, HttpServletRequest request, @PathVariable("fragmentFile") String fragmentFile) {
-        mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
-        mv.setViewName("test/" + fragmentFile);
-        return mv;
+        if ("index".equalsIgnoreCase(fragmentFile)) {
+            mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
+            mv.setViewName("local/" + fragmentFile);
+            addPageData(mv, request);
+            return mv;
+        }
+        return getModelAndView(mv, request, "pageContent/" + fragmentFile);
     }
+
 
     @RequestMapping(value = {"/{directory}/{fragmentFile}.html"})
     public ModelAndView subPages(ModelAndView mv, HttpServletRequest request, @PathVariable("directory") String directory, @PathVariable("fragmentFile") String fragmentFile) {
@@ -25,10 +30,25 @@ public class UserViewController {
     }
 
     private ModelAndView getModelAndView(ModelAndView mv, HttpServletRequest request, String fragmentFile) {
-        mv.getModel().put("fragmentFile", fragmentFile);
+        mv.getModel().put("pageContentFile", fragmentFile);
         mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
 
-        mv.setViewName("user_template");
+        mv.setViewName("local/single-column");
+        addPageData(mv, request);
         return mv;
+    }
+
+    private void addPageData(ModelAndView mv, HttpServletRequest httpServletRequest) {
+        String title = "Not Implemented";
+
+        if (httpServletRequest.getRequestURI().startsWith("/events.html")) {
+            title = "Events";
+        } else if (httpServletRequest.getRequestURI().startsWith("/pressRelease.html")) {
+            title = "Press Releases";
+        } else if (httpServletRequest.getRequestURI().startsWith("/contactus.html")) {
+            title = "Contact US";
+        }
+        mv.getModel().put("pageTitle", title);
+
     }
 }

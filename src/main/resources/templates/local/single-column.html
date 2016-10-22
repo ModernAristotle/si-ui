@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<templates lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:th="http://www.thymeleaf.org"> <![endif]-->
+<!--[if IE 7]>
+<templates lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8" xmlns:th="http://www.thymeleaf.org"> <![endif]-->
+<!--[if IE 8]>
+<templates lang="en" ng-app="app" class="no-js lt-ie9" xmlns:th="http://www.thymeleaf.org"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="app" class="no-js" xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
+
+<!-- Mirrored from kodeforest.net/html/democracy/event.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 07:55:33 GMT -->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Swaraj Abhiyan - Offical Website</title>
+
+    <div th:include="./includes/header-css"/>
+
+</head>
+
+<body>
+
+<!--Kode Wrapper Start-->
+<div class="kode_wrapper">
+
+    <!--Header Wrap Start-->
+    <header>
+        <div th:include="./common/header-menu"/>
+    </header>
+    <!--Header Wrap Start-->
+
+
+    <!--Bread Crumb Wrap Start-->
+    <div class="kode_about_bg">
+        <div th:include="./common/bread-crumb"/>
+    </div>
+    <!--Bread Crumb Wrap Start-->
+
+
+    <!--Content Wrap Start-->
+    <div class="kode_content">
+
+        <div th:include="${pageContentFile}"/>
+
+    </div>
+    <!--Content Wrap End-->
+
+
+    <!--Footer Wrap Start-->
+    <footer>
+        <div th:include="./common/footer-menu"/>
+    </footer>
+    <!--Footer Wrap End-->
+
+
+</div>
+<!--Kode Wrapper End-->
+
+
+<div th:include="./includes/footer-js"/>
+
+</body>
+
+<!-- Mirrored from kodeforest.net/html/democracy/event.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 07:55:41 GMT -->
+</html>
