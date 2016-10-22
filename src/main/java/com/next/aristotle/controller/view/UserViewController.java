@@ -11,9 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 public class UserViewController {
 
 
-    @RequestMapping(value = {"/{fragmentName}.html"})
-    public String genericEachHtmlView(ModelAndView mv, HttpServletRequest request, @PathVariable("fragmentName") String fragmentName) {
-        return "test/" + fragmentName;
+    @RequestMapping(value = {"/{fragmentFile}.html"})
+    public ModelAndView genericEachHtmlView(ModelAndView mv, HttpServletRequest request, @PathVariable("fragmentFile") String fragmentFile) {
+        mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
+        mv.setViewName("test/" + fragmentFile);
+        return mv;
+    }
+
+    @RequestMapping(value = {"/{directory}/{fragmentFile}.html"})
+    public ModelAndView subPages(ModelAndView mv, HttpServletRequest request, @PathVariable("directory") String directory, @PathVariable("fragmentFile") String fragmentFile) {
+        mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
+        return getModelAndView(mv, request, directory + "/" + fragmentFile);
     }
 //    @RequestMapping(value = {"/me/basic.templates"})
 //    public String basic(ModelAndView mv, HttpServletRequest request) {
