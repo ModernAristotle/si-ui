@@ -1,9 +1,9 @@
 /*==================================================
 
-Project:	Democracy - The political Theme
+Project:	Swaraj India - Official Website
 Version:	1.0
 Last change:	05/11/15
-Author :	KodeForest
+Author :	Neeraj
 
 /**
  * Table of Contents :
@@ -959,10 +959,11 @@ ul.kode_tab_lnk li:hover:after{
 }
 .kode_wel_demo_des p{
 	line-height:29px;
-	word-break:break-all;
+	/*word-break:break-all;*/
 	font-weight:400;
 	margin-bottom:20px;	
 	color:#666;
+	text-align:justify;
 }
 ul.kode_tab_lnk.nav > li > a:focus,
 ul.kode_tab_lnk.nav > li > a:hover{
@@ -4057,7 +4058,7 @@ p.planning_1{
 .kode-team-testi{
 	float:left;
 	width:100%;
-	background:#f7f7f7;
+	background:#faf2bf;
 	padding:70px 0px 40px;
 }
 .kode_team_img,
@@ -5983,4 +5984,3 @@ ul.kf_loc_socil_icon{
             left: 0;
             right: 0;
         }
- 
