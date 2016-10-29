@@ -320,13 +320,11 @@ previous button's border...
 	font-size: .9em;
 	margin-top: 2px;
 }
-
 /* jqui themed */
 
 .fc-popover > .ui-widget-header + .ui-widget-content {
 	border-top: 0; /* where they meet, let the header have the border */
 }
-
 
 /* Misc Reusable Components
 --------------------------------------------------------------------------------------------------*/
