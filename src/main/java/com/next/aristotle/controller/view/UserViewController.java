@@ -14,6 +14,7 @@ public class UserViewController {
     @RequestMapping(value = {"/index.html", "/"})
     public ModelAndView homePage(ModelAndView mv, HttpServletRequest request) {
         mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
+        mv.getModel().put("s3_dynamic_css_dir", "");
         mv.setViewName("local/index");
         addPageData(mv, request);
         return mv;
@@ -28,13 +29,14 @@ public class UserViewController {
     @RequestMapping(value = {"/{directory}/{fragmentFile}.html"})
     public ModelAndView subPages(ModelAndView mv, HttpServletRequest request, @PathVariable("directory") String directory, @PathVariable("fragmentFile") String fragmentFile) {
         mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
+        mv.getModel().put("s3_dynamic_css_dir", "");
         return getModelAndView(mv, request, directory + "/" + fragmentFile);
     }
 
     private ModelAndView getModelAndView(ModelAndView mv, HttpServletRequest request, String fragmentFile) {
         mv.getModel().put("pageContentFile", fragmentFile);
         mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
-
+        mv.getModel().put("s3_dynamic_css_dir", "");
         mv.setViewName("local/single-column");
         addPageData(mv, request);
         return mv;
