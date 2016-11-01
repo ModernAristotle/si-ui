@@ -1,0 +1,67 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#listselect").click(function(){
+        $("#listselected").show();
+    });
+});
+</script>
+<style>
+     .swaraj_div
+        {
+            height:100px;
+
+            border:2px solid red;
+        }
+        .swaraj_div:hover
+        {
+            background-color:orange;
+        }
+
+
+</style>
+
+
+<div class="kode_content">
+
+  <!--Team Wrap Start-->
+    <div class="kode-team-intro">
+        <div class="col-md-12">
+            <div class="col-md-2">
+
+          <a href="javascript:void(0);" > <div class="kode_team_img  swaraj_div" style="border:medium solid yellow;height:171px; margin-bottom:5em;" id="listselect">
+
+                <h6 style="padding: 69px 12px 37px 28px">MCD Election 2017</h6>
+
+            </div></a>
+            </div>
+
+
+            <div class="col-md-2">
+
+             <div class="kode_team_img">
+
+               <select style="display:none" id="listselected" onChange="window.location.href=this.value">
+
+                   <option value="">...  Select Your Word  ...</option>
+                   <option value="/team.html">001</option>
+                   <option value="/team.html">002</option>
+                   <option value="/team.html">003</option>
+                   <option value="/team.html">004</option>
+                   <option value="/team.html">005</option>
+                   <option value="/team.html">006</option>
+                   <option value="/team.html">007</option>
+                   <option value="/team.html">008</option>
+                   <option value="/team.html">009</option>
+                   <option value="/team.html">010</option>
+
+
+
+               </select>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
