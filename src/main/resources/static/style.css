@@ -263,9 +263,9 @@ header{
 	text-transform:uppercase;
 	color:#fff;
 	font-size:13px;
-	padding:25px 15px;
+	padding:24px 15px;
 	font-weight:400;
-	line-height:0px;
+	line-height:13px;
    font-family:"Open Sans",sans-serif;
 }
 .kode_menu ul li.active:before,
