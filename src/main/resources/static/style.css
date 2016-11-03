@@ -263,9 +263,9 @@ header{
 	text-transform:uppercase;
 	color:#fff;
 	font-size:13px;
-	padding:25px 15px;
+	padding:24px 15px;
 	font-weight:400;
-	line-height:14px;	
+	line-height:13px;
    font-family:"Open Sans",sans-serif;
 }
 .kode_menu ul li.active:before,
@@ -5976,11 +5976,11 @@ ul.kf_loc_socil_icon{
     color: #fff;
     font-size: 27px;
 }
-    .swaraj:hover {
+    /*.swaraj:hover {
      border-bottom: 2px solid #fff;
             }
         .header {
             position: fixed;
             left: 0;
             right: 0;
-        }
+        }*/
