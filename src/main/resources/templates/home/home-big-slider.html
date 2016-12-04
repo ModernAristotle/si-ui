@@ -18,9 +18,18 @@
     </div>
     <div class="kode_brekg_news_des">
         <div class="bxslider">
+            {{#if NewsPressReleaseUpdatePlugin}}
+            {{#each comments}}
+            <div class="item">SHOULD NOT स्वराज इंडिया : एक नई अखिल भारतीय राजनीतिक पार्टी का ऐलान</div>
+            {{/each}}
+
+            {{else}}
             <div class="item">स्वराज इंडिया : एक नई अखिल भारतीय राजनीतिक पार्टी का ऐलान</div>
             <div class="item">AAP govt's decision of not granting new liquor licences to</div>
             <div class="item">स्वराज अभियानप्रेस नोट : 02 अक्टूबर 2016स्वराज</div>
+            {{/if}}
+
+
         </div>
     </div>
 </div>
