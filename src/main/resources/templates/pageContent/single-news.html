@@ -13,11 +13,17 @@
 
                 <div class="col-md-12">
 
-                    <div class="kode_wel_demo_des">
-                        <!--<h6> What is Swaraj Abhiyan?</h6>-->
-                        <h5>{{SingleContentPlugin.title}}</h5>
+                    <div class="kode_news_detail">
+                        <h4>{{SingleContentPlugin.title}}</h4>
+                        <ul>
+                            <li>by <a href="#"> <span>{{SingleContentPlugin.author}}</span> </a>- {{SingleContentPlugin.publishDate}}</li>
+                            <li><a href="#"> <i class="fa fa-heart-o"></i>144 </a></li>
+                            <li><a href="#"> <i class="fa fa-comment-o"></i>49 </a></li>
+                            <li><a href="#"> <i class="fa fa-eye"></i>12,998 </a></li>
+                        </ul>
 
-                        {{SingleContentPlugin.content}}
+
+                        {{{SingleContentPlugin.content}}}
                     </div>
                 </div>
 
