@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 public class UserViewController {
 
 
-    @RequestMapping(value = {"/index.html", "/"})
+    @RequestMapping(value = {"/template/index.html", "/"})
     public ModelAndView homePage(ModelAndView mv, HttpServletRequest request) {
         mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
         mv.getModel().put("s3_dynamic_css_dir", "");
@@ -20,13 +20,13 @@ public class UserViewController {
         return mv;
     }
 
-    @RequestMapping(value = {"/{fragmentFile}.html"})
+    @RequestMapping(value = {"/template/{fragmentFile}.html"})
     public ModelAndView genericEachHtmlView(ModelAndView mv, HttpServletRequest request, @PathVariable("fragmentFile") String fragmentFile) {
         return getModelAndView(mv, request, "pageContent/" + fragmentFile);
     }
 
 
-    @RequestMapping(value = {"/{directory}/{fragmentFile}.html"})
+    @RequestMapping(value = {"/template/{directory}/{fragmentFile}.html"})
     public ModelAndView subPages(ModelAndView mv, HttpServletRequest request, @PathVariable("directory") String directory, @PathVariable("fragmentFile") String fragmentFile) {
         mv.getModel().put("s3_static_content_dir", "https://s3.ap-south-1.amazonaws.com/siorg/website");
         mv.getModel().put("s3_dynamic_css_dir", "");
