@@ -1,0 +1,16 @@
+{
+  "SingleContentPlugin": {
+    "id": 1,
+    "dateCreated": "2016-11-28T04:13:20Z",
+    "dateModified": "2016-12-21T04:41:03Z",
+    "title": "My First Test Press Release",
+    "urlTitle": "/content/pressrelease/1/my_first_test_press_release",
+    "contentType": "PressRelease",
+    "content": "The \"following\" drawings show what would <b>normally</b> be acceptable when removing chimney breasts and supporting the remainder of the chimney stack within the loft space. At least two thirds (67%) of <br>the height of the retained chimney stack should be kept within the loft space below the lowest part of the roof where the chimney projects through.",
+    "imageUrl": "https://s3.ap-south-1.amazonaws.com/siorg/website/extra-images/latest-wrk-07.jpg",
+    "author": null,
+    "publishDate": "2016-12-19T00:47:17Z",
+    "global": true
+  },
+  "pageTitle": "My First Test Press Release"
+}

@@ -1,0 +1,30 @@
+<ul class="bxslider">
+    <li>
+        <img th:src="|${s3_static_content_dir}/extra-images/banner-01.jpg|" alt="Banner Image Here"/>
+    </li>
+
+    <li>
+        <img th:src="|${s3_static_content_dir}/extra-images/banner-02.jpg|" alt="Banner Image Here"/>
+    </li>
+
+    <li>
+        <img th:src="|${s3_static_content_dir}/extra-images/banner-03.jpg|" alt="Banner Image Here"/>
+    </li>
+</ul>
+
+<div class="kode_breaking_news">
+    <div class="kode_breaking_hdg">
+        <h6 style="color:black">Updates</h6>
+    </div>
+    <div class="kode_brekg_news_des">
+        <div class="bxslider">
+            {{#if NewsPressReleaseUpdatePlugin}}
+            {{#each NewsPressReleaseUpdatePlugin}}
+            <div class="item"><a href="{{urlTitle}}.html">{{contentType}} : {{title}}</a></div>
+            {{/each}}
+            {{/if}}
+
+
+        </div>
+    </div>
+</div>

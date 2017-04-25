@@ -1,0 +1,34 @@
+<section>
+    <div class="container">
+        <div class="row">
+            {{#each MediaNewsPressReleaseListPlugin}}
+
+            <div class="col-md-12 col-sm-12 col-xl-8 col-lg-12 kode_news_colmn_list">
+                <div class="kode_news_list">
+                    <figure>
+                        <img src="{{imageUrl}}" alt="News List Image"/>
+                    </figure>
+                    <div class="kode_news_list_des">
+                        <span style="background-color:#176FB3">{{contentType}}</span>
+                        <h6><a href="{{urlTitle}}.html"> {{title}} </a></h6>
+                        <div class="kode_author">by <a href="{{urlTitle}}.html"> {{author}}</a>- {{publishDate}}</div>
+                        <p>{{contentSmall}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="kode_pagination">
+            <ul class="pagination">
+                <li><a aria-label="Previous" href="#">Next</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a aria-label="Next" href="#"> Previous</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+

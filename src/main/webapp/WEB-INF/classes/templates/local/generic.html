@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.runtime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+<body>
+<div id="target">
+    <div id="data" class="data" th:utext="${data}"></div>
+    Fetching Template.....
+</div>
+<script th:inline="javascript">
+     function getTemplateAjax() {
+     data = $( "div.data" ).html()
+     htmlTemplatePath = /*[[${template}]]*/
+     <!--alert('Data : ' + data);-->
+     <!--alert('htmlTemplatePath : ' + htmlTemplatePath);-->
+
+        $.ajax({
+            url: htmlTemplatePath,
+            success: function(htmlTemplate) {
+
+            var rawTemplate = htmlTemplate;//(step 1)
+            <!--alert('htmlTemplate : ' + htmlTemplate);-->
+
+            var compiledTemplate = Handlebars.compile(htmlTemplate); // (step 2)
+
+            var html = compiledTemplate(JSON.parse(data)); // (step 3)
+
+            $('#target').html(html);
+
+            }
+        });
+    }
+    getTemplateAjax();
+
+</script>
+</body>
+</html>

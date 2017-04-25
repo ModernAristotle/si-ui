@@ -1,0 +1,78 @@
+{
+  "MediaNewsPressReleasePlugin": [
+    {
+      "id": 4,
+      "dateCreated": "2016-12-23T08:41:35Z",
+      "dateModified": "2016-12-23T08:41:46Z",
+      "title": "Some other News",
+      "urlTitle": "/content/news/4/some_other_news",
+      "contentType": "News",
+      "imageUrl": "http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+      "author": null,
+      "publishDate": "2016-12-23T08:41:46Z",
+      "global": true,
+      "contentSmall": "स्वराज अभियान व स्वराज INDIA   प्रेस विज्ञप्ति : 18 दिसंबर, 2016   आज जंतर-मंतर पर स्वराज इंडिया की 'कालेधन पर हल्लाबोल' रैली में उमड़ा जनसैलाब। राजन..."
+    },
+    {
+      "id": 3,
+      "dateCreated": "2016-12-20T19:46:12Z",
+      "dateModified": "2016-12-21T04:40:43Z",
+      "title": "Swaraj India announced to launch a nation-wide campaign against black money in politics.",
+      "urlTitle": "/content/pressrelease/3/swaraj_india_announced_to_launch_a_nationwide_campaign_against_black_money_in_politics",
+      "contentType": "PressRelease",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/siorg/website/extra-images/latest-wrk-05.jpg",
+      "author": null,
+      "publishDate": "2016-12-20T19:46:51Z",
+      "global": true,
+      "contentSmall": "  Massive inaugural rally of the newly formed political party announces a campaign for reforms of political funding; calls upon citizens to join   Bl..."
+    },
+    {
+      "id": 2,
+      "dateCreated": "2016-12-19T01:14:42Z",
+      "dateModified": "2016-12-21T04:42:00Z",
+      "title": "My First Test News",
+      "urlTitle": "/content/news/2/my_first_test_news",
+      "contentType": "News",
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/siorg/website/extra-images/latest-wrk-06.jpg",
+      "author": null,
+      "publishDate": "2016-12-19T01:14:46Z",
+      "global": true,
+      "contentSmall": "The day when Kohli went on to assert himself as a 'chasing specialist' (English version)     A day studded with glory moments. Rahul's near double, N..."
+    }
+  ],
+  "NewsPressReleaseUpdatePlugin": [
+    {
+      "id": 4,
+      "title": "Some other News",
+      "urlTitle": "/content/news/4/some_other_news",
+      "contentType": "News",
+      "author": null,
+      "publishDate": "2016-12-23T08:41:46Z"
+    },
+    {
+      "id": 3,
+      "title": "Swaraj India announced to launch a nation-wide campaign against black money in politics.",
+      "urlTitle": "/content/pressrelease/3/swaraj_india_announced_to_launch_a_nationwide_campaign_against_black_money_in_politics",
+      "contentType": "PressRelease",
+      "author": null,
+      "publishDate": "2016-12-20T19:46:51Z"
+    },
+    {
+      "id": 2,
+      "title": "My First Test News",
+      "urlTitle": "/content/news/2/my_first_test_news",
+      "contentType": "News",
+      "author": null,
+      "publishDate": "2016-12-19T01:14:46Z"
+    },
+    {
+      "id": 1,
+      "title": "My First Test Press Release",
+      "urlTitle": "/content/pressrelease/1/my_first_test_press_release",
+      "contentType": "PressRelease",
+      "author": null,
+      "publishDate": "2016-12-19T00:47:17Z"
+    }
+  ]
+}
+
